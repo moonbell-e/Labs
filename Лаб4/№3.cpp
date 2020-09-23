@@ -4,9 +4,9 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "Rus");
 	float a, b, average;
-	cout << "Ââåäèòå äâà ÷èñëà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð²Ð° Ñ‡Ð¸ÑÐ»Ð°: ";
 	cin >> a >> b;
 	average = (a + b) / 2;
-	cout << "Ñðåäíåå àðèôìèòè÷åñêîå ðàâíî " << average << '\n';
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼Ð¸Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ Ñ€Ð°Ð²Ð½Ð¾ " << average << '\n';
 	return 0;
 }
