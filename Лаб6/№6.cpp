@@ -4,10 +4,10 @@ int main()
 {
 	setlocale(LC_ALL, "Rus");
 	int A, oleg, oleg2;
-	cout << "Ââåäèòå ÷èñëî A: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ A: ";
 	cin >> A;
 	oleg = A * A;
 	A = oleg * oleg;
 	oleg = A * A;
-	cout << "×èñëî À â âîñüìîé ñòåïåíè ðàâíî: " << oleg;
+	cout << "Ð§Ð¸ÑÐ»Ð¾ Ð Ð² Ð²Ð¾ÑÑŒÐ¼Ð¾Ð¹ ÑÑ‚ÐµÐ¿ÐµÐ½Ð¸ Ñ€Ð°Ð²Ð½Ð¾: " << oleg;
 }
