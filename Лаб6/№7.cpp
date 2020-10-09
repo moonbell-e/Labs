@@ -11,5 +11,5 @@ int main()
 	oleg2 = oleg * oleg;
 	oleg = oleg2 * A;
 	oleg2 = oleg * oleg * oleg;
-	cout << "Число А ва в пятнадцатой степени равно: " << oleg2;
+	cout << "Число А в пятнадцатой степени равно: " << oleg2;
 }
