@@ -1,23 +1,33 @@
-﻿#include<stdio.h> // подключение заголовочного файла
-int main() {
-	int i = 0, j, min, buf, N = 7; // объявление переменных
-	int arr[] = { -10, 4, 1, 0, 3, 7, 2 }; // объявление массива
-	while (i < N - 1) {
-		j = i + 1;
-		min = i;
-		while (j < N) {
-			if (arr[j] < arr[min])
-				min = j;
-			j++;
-		}
-		buf = arr[i];
-		arr[i] = arr[min];
-		arr[min] = buf;
-		i++;
+﻿#include <stdio.h>
+void qsort(int* arr, int b, int e) {
+	if (b < e) {
+		int buf, l = b, r = e, piv = arr[(b + e) / 2];
+		do {
+			while (arr[l] < piv)
+				l++;
+			while (arr[r] > piv)
+				r--;
+			if (l <= r) {
+				int t = arr[l];
+				arr[l] = arr[r];
+				arr[r] = t;
+				l++;
+				r--;
+			}
+		} while (l <= r);
+		qsort(arr, b, r);
+		qsort(arr, l, e);
 	}
-	for (i = 0; i < N; i++) // цикл для вывода конечного значения
-		printf_s(" %d", arr[i]);
-
+}
+int main() {
+	int arr[] = { 1, 2, 4, 78, 0, -45, 6 };
+	int N = sizeof(arr) / sizeof(int);
+	int i;
+	qsort(arr, 0, N - 1);
+	for (i = 0; i < N; i++) {
+		printf("%d ", arr[i]);
+	}
+	return 0;
 }
 
 
